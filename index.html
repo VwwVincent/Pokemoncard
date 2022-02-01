@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokémon</title>
+    <style>
+      .container {
+        font-family: verdana, sans-serif;
+        background-image: url(https://thumbs.dreamstime.com/z/cloud-sky-cartoon-background-blue-white-clouds-flat-poster-flyer-cloudscape-panorama-pattern-vector-seamless-colored-162001541.jpg);
+        background-size: 500px;
+        width: 276px;
+        height: 394px;
+        border: 12px solid #f0e14a;
+        border-radius: 12px;
+        letter-spacing: -0.5px;
+      }
+      .imgcontainer {
+        background-image: url(http://pm1.narvii.com/6178/310c8e9da1ed9ba1d295a222ebb532d4cda970df_00.jpg);
+        background-size: 226px;
+        width: 226px;
+        height: 156px;
+        margin: auto;
+        margin-top: 0px;
+        border-style: solid;
+        border-width: 7px;
+        border-image: linear-gradient(45deg, #a99738, #e3e5a8, #a99738) 1;
+      }
+
+      .waterBig {
+        background-image: url(https://www.clipartmax.com/png/full/26-261578_pokemon-water-type-symbol.png);
+        background-size: 25px;
+        width: 25px;
+        height: 25px;
+      }
+
+      .water {
+        background-image: url(https://www.clipartmax.com/png/full/26-261578_pokemon-water-type-symbol.png);
+        background-size: 17px;
+        width: 17px;
+        height: 17px;
+      }
+
+      .grass {
+        background-image: url(https://bartduisters.com/trading-card-generator/img/grass-classic.png);
+        background-size: 15px;
+        width: 15px;
+        height: 15px;
+      }
+
+      .fighting {
+        background-image: url(https://bartduisters.com/trading-card-generator/img/fighting-classic.png);
+        background-size: 15px;
+        width: 15px;
+        height: 15px;
+      }
+
+      .normal {
+        background-image: url(https://bartduisters.com/trading-card-generator/img/colorless-classic.png);
+        background-size: 15px;
+        width: 15px;
+        height: 15px;
+      }
+
+      .textcontainer1 {
+        display: flex;
+        margin-left: 37px;
+        margin-top: 5px;
+        margin-right: 8px;
+        padding-left: 6px;
+        font-size: 7px;
+        justify-content: space-between;
+        border-style: solid;
+        border-width: 0px 0px 2px;
+        border-image: linear-gradient(45deg, #a99738, #e3e5a8) 1;
+      }
+
+      .textcontainer2 {
+        display: flex;
+        margin-left: 35px;
+        margin-right: 15px;
+        font-size: 20px;
+        justify-content: space-between;
+      }
+      .textcontainer2B {
+        display: flex;
+      }
+
+      .textcontainer3 {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+
+        padding-right: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid black;
+      }
+
+      .watercontainer1 {
+        display: flex;
+        flex-wrap: wrap;
+        width: 40px;
+        justify-content: center;
+      }
+
+      .watercontainer2 {
+        display: flex;
+        flex-wrap: wrap;
+        width: 85px;
+        justify-content: center;
+      }
+
+      .textcontainer4 {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 5px;
+        margin-right: 5px;
+        padding-left: 0px;
+        padding-right: 5px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        border-bottom: 1px solid black;
+        line-height: 8px;
+      }
+      .symbolcontainer > * {
+      }
+
+      .textcontainer5 {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        line-height: 8px;
+        font-size: 8px;
+      }
+
+      .symbolcontainer {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-bottom: 3px;
+        line-height: 8px;
+        font-size: 10px;
+      }
+
+      .textcontainer6 {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 13px;
+        margin-right: 13px;
+        padding-left: 7px;
+        padding-right: 7px;
+        padding-top: 2px;
+        padding-bottom: 3px;
+        line-height: 8px;
+        font-size: 8px;
+        border-style: solid;
+        border-width: 1.3px;
+        border-image: linear-gradient(190deg, #a99738, #e3e5a8, #a99738) 1;
+      }
+
+      .textcontainer7 {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 2px;
+        margin-right: 2px;
+        padding-top: 3px;
+        line-height: 8px;
+        font-size: 6px;
+      }
+
+      .symbol1 {
+        display: flex;
+        flex-wrap: wrap;
+        width: 50px;
+        justify-content: center;
+      }
+
+      .symbol2 {
+        display: flex;
+        flex-wrap: wrap;
+        width: 50px;
+        justify-content: center;
+        font-size: 8px;
+      }
+
+      .symbol3 {
+        display: flex;
+        flex-wrap: wrap;
+        width: 50px;
+        justify-content: center;
+      }
+
+      .goldbar {
+        display: flex;
+        background: linear-gradient(0.25turn, #80701f, #efe092, #80701f);
+        width: fit-content;
+        padding: 1px;
+        padding-right: 4px;
+        padding-left: 4px;
+
+        margin: auto;
+
+        margin-top: 5px;
+        font-size: 8px;
+      }
+
+      .bold {
+        font-weight: bold;
+      }
+
+      .italic {
+        font-style: italic;
+      }
+
+      .red {
+        color: red;
+      }
+      .dragon {
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+      }
+
+      .bubblebeam {
+        font-size: 12px;
+      }
+
+      .bubblesmall {
+        font-size: 10px;
+      }
+
+      .points {
+        font-size: 22px;
+        display: flex;
+        align-items: center;
+      }
+      .fighttext {
+        display: flex;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="textcontainer1">
+        <div class="bold italic">Evolves from magicorp</div>
+        <div>Put Gyarados on the Basic Pokémon</div>
+      </div>
+      <div class="textcontainer2">
+        <div class="bold">Gyarados</div>
+        <div class="textcontainer2B">
+          <div class="red">100 HP</div>
+          <div class="waterBig"></div>
+        </div>
+      </div>
+      <div class="imgcontainer"></div>
+      <div class="goldbar bold italic">
+        Atrocious Pokémon. Length: 21'4", Weight: 518lbs.
+      </div>
+
+      <div class="textcontainer3">
+        <div class="watercontainer1">
+          <div class="water"></div>
+          <div class="water"></div>
+          <div class="water"></div>
+        </div>
+        <div class="dragon bold">Dragon Rage</div>
+        <div class="points">50</div>
+      </div>
+      <div class="textcontainer4">
+        <div class="watercontainer2">
+          <div class="water"></div>
+          <div class="water"></div>
+          <div class="water"></div>
+          <div class="water"></div>
+        </div>
+        <div>
+          <span class="bubblebeam bold">Bubblebeam</span>
+          <span class="bubblesmall"
+            >Flip a coin. If heads, the defending Pokémon is now
+            paralyzed.</span
+          >
+        </div>
+        <div class="points">40</div>
+      </div>
+      <div class="textcontainer5 bold">
+        <div>weakness</div>
+        <div>resistance</div>
+        <div>retreat cost</div>
+      </div>
+      <div class="symbolcontainer">
+        <div class="symbol1">
+          <div class="grass"></div>
+        </div>
+        <div class="symbol2">
+          <div class="fighting"></div>
+          <div class="fighttext bold">-30</div>
+        </div>
+        <div class="symbol3">
+          <div class="normal"></div>
+          <div class="normal"></div>
+          <div class="normal"></div>
+        </div>
+      </div>
+      <div class="textcontainer6 italic bold">
+        Rarely seen in the wild. Huge and viscious, it is capable of destroying
+        entire cities in a rage. &nbsp;&nbsp; LV.41 &nbsp;&nbsp; #130
+      </div>
+      <div class="textcontainer7">
+        <span class="bold">Illus. Mituhiro Arita</span>
+        <span>
+          ©1995, 96, 98 Nintendo, Creatures, GAMEFREAK. ©1999 Wizards.
+        </span>
+        <span class="bold">6/102 ★</span>
+      </div>
+    </div>
+  </body>
+</html>
